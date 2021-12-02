@@ -3,7 +3,7 @@ import os.path
 import config
 
 input_url = 'https://adventofcode.com/2021/day/1/input'
-data_file = '2021/data/day01_p1'
+data_file = 'data/day01_p1'
 
 if not os.path.exists(data_file):
     cookies = dict(session=config.session_cookie)
