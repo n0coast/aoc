@@ -1,15 +1,9 @@
-import requests
-import os.path
-import config
+import data
 
 input_url = 'https://adventofcode.com/2021/day/1/input'
 data_file = 'data/day01_p2'
 
-if not os.path.exists(data_file):
-    cookies = dict(session=config.session_cookie)
-    r = requests.get(input_url, cookies=cookies)
-    with open(data_file, 'w+') as file:
-        file.write(r.text)
+data.get_data(data_file, input_url)
 
 with open(data_file, 'r') as file:
     count = 0
@@ -21,4 +15,7 @@ with open(data_file, 'r') as file:
         sweep_b = sum(lines[line_no + 1: line_no + 4])
         if sweep_b > sweep_a:
             count += 1
+
 print(count)
+
+
