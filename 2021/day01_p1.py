@@ -1,7 +1,7 @@
 import data
 
 input_url = 'https://adventofcode.com/2021/day/1/input'
-data_file = 'blahdata/day01_p1'
+data_file = 'data/day01_p1'
 
 data.get_data(data_file, input_url)
 
